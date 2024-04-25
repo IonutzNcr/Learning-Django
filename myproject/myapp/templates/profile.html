@@ -1,0 +1,70 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block head%}
+<link rel="stylesheet" href="{% static 'styles/profile.css' %}" />
+{% endblock%}
+
+
+{% block content%}
+
+<div class="profile">
+  <div class="profilephoto">
+
+  </div>
+  <div class="profileinfo">
+    <p>@{{profile.username}}</p>
+    <p>{{profile.email}}</p>
+  </div>
+  <div class="profilemodifier">
+    <button onclick="window.location.assign('/profile/update')"><img class="img" src="{% static 'images/modify.png'%}" /></button>
+  </div>
+</div>
+<div class="">
+  <form class="" method="POST" action ="">
+    {% csrf_token %}
+    <input name="add" value="" hidden />
+    <button class="add_victory_btn" type="submit">Add</button>
+  </form>
+</div>
+<div class="{% if form_add %}active {% endif %}modal">
+    <form class="form_create_victory" action="" method="POST">
+        {% csrf_token %}
+        {{ form_add.as_div }}
+        <button id="create" type="submit">Create</button>
+        <a id="annuler" href="/profile">Annuler</a>
+        
+    </form>
+    
+</div>
+
+<div class="searchbarcontainer">
+  <form class="searchbar" method="GET" action="">
+      <input placeholder="rechercher..." name ="search"/>
+      <button> Rechercher </button>
+  </form>    
+</div>
+
+<div class="victorycontainer">
+  {% for victory in victories %}
+ 
+  <div class="victorycard">
+      <div class="cardtitle">@{{victory.user}} <span> <a href="/profile{{victory.url}}"><img class="img" src="{% static 'images/modify.png'%}" /> </a></span> </div>
+      {% if victory.modify %}
+      <form class="modify_form" action="" method="POST">
+        {% csrf_token %}
+        <input type="hidden" name="id" value="{{victory.id}}" />
+        <input class="cardcontent input" name="update" value="{{victory.content}}"/>
+        <button type="submit"><img class="img" src="{% static 'images/validate.png' %}"/></button>
+        <a href="/profile"><img class="img" src="{% static 'images/cancel.png' %}" /></a>
+      </form >
+      
+      {% else %}
+      <div class="cardcontent">{{victory.content}}</div>
+      {% endif %}
+      <div class="carddate">{{victory.date}}</div>
+  </div>
+ 
+{% endfor %}
+</div>
+{% endblock%}

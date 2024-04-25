@@ -1,0 +1,18 @@
+# Bytecode
+__pycache__/
+*.pyc
+
+# Virtual environments
+venv/
+myenv/
+
+# Editor directories
+.idea/
+.vscode/
+
+# Log files
+*.log
+
+# If using a database, you might want to ignore the database file as well.
+*.db
+*.sqlite

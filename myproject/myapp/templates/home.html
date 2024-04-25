@@ -1,0 +1,22 @@
+{% extends "base.html" %} 
+{% load static %}
+{% block head%}
+<link rel="stylesheet" href="{% static 'styles/home.css' %}">
+<title>Home</title>
+
+{% endblock %} {% block content%}
+<h1 class="title">Petites Victoires</h1>
+<div class="textcontent">
+  <p>
+    Parce que nous décidons de bouger que les choses bougent. Alors n'hésitez
+    plus et marquer vos plus grandes victoires dès ajourd'hui.
+  </p>
+  <p>
+    Petite ou grande victoire, le plus important c'est qu'on décide d'aller
+    vers l'avant et de s'améliorer.
+  </p>
+</div>
+<button onclick="window.location.assign('/login')">Login</button>
+<a href="/register">Register</a>
+
+{% endblock%}

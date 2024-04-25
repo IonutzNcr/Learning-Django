@@ -1,0 +1,31 @@
+{% extends 'base.html'%}
+{% load static %}
+
+{% block head %}
+<link rel="stylesheet" href="{% static 'styles/profile-update.css' %}" />
+{% endblock%}
+
+
+{% block content%}
+
+<h1> Bienvenue sur ta page de profile:  <span class="username">@{{user.username}}</span> </h1>
+<form class="profile-form" method="POST" action="">
+    {% csrf_token %}
+    <input type="hidden" name="id" value="{{user.id}}"/>
+    <div>
+        <label>Username</label>
+        <input name="username" value="{{user.username}}">
+    </div>
+    <div>
+        <label>Email</label>
+        <input name="email" value="{{user.email}}">
+    </div>
+    <div class="divbtns">
+        <button type="submit">Valider</button>
+        <button type="button" id="annuler" onclick="window.location.assign('/profile')"> Annuler </button>
+    </div>
+   
+</form>
+
+
+{% endblock%}

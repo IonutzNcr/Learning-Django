@@ -1,0 +1,224 @@
+body{
+    width: 100vw;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.profile{
+    display: flex;
+
+    box-sizing: border-box;
+    background-color: var(--ternary);
+    width: 500px;
+    border-radius: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color:var(--bg-default);
+    padding: 10px;
+    box-shadow: 0 2px 3px black;
+    gap:20px;
+}
+
+.profilemodifier{
+    margin-left: auto;
+    color:var(--ternary);
+}
+
+.profilemodifier > button{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background: none;
+    border: none;
+    border-bottom: 2px var(--bg-default) solid;
+    border-left: 2px var(--bg-default) solid;
+    padding:10px;
+    offset: none;
+    box-shadow: 0 2px 2px rgb(44, 41, 41);
+}
+
+.profileinfo{
+    display:flex;
+    flex-direction: column;
+}
+
+.profilephoto{
+    width:100px;
+    height: 100px;
+    background-color: var(--bg-default);
+}
+
+.victorycard{
+    background-color: var(--bg-slow);
+    width: 500px;
+    
+    display:flex;
+    flex-direction: column;
+    gap:20px;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    box-shadow: 0 2px 3px black;
+
+
+}
+
+.add_victory_btn{
+    padding: 10px;
+    background-color: var(--bg-intense);
+    border: none;
+    offset: none;
+    border-radius: 10px;
+    color:white;
+    font-weight: 600;
+    width: 100px;
+    box-shadow: 0 2px 3px var(--ternary);
+}
+
+.victorycontainer{
+    display:flex;
+    flex-direction: column;
+    gap:20px;
+   
+}
+
+.searchbarcontainer{
+    margin-top:20px;
+    margin-bottom:20px;
+}
+
+.cardtitle{
+    display:flex;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    background-color: white;
+    /* width: 100%; */
+    padding: 20px;
+    border: 1px solid var(--bg-slow);
+}
+
+.cardtitle > span{
+    margin-left:auto;
+}
+
+.cardcontent,.carddate{
+    padding: 20px;
+    color:var(--bg-default);
+}
+
+.carddate{
+    font-style: italic;
+}
+
+
+.searchbar > input{
+    height: 2ch;
+    padding:10px;
+    border-radius: 20px;
+    border: 1px solid var(--bg-slow);
+}
+
+.searchbar > button{
+   padding: 10px;
+   background-color: var(--bg-intense);
+   border: none;
+   offset: none;
+   border-radius: 10px;
+   color:white;
+   font-weight: 600;
+   width: 100px;
+   box-shadow: 0 2px 3px var(--ternary);
+}
+
+
+.modal{
+    display:none;
+}
+
+.active{
+    box-sizing: border-box;
+    padding: 20px;
+    margin-top: 20px;
+    display:block;
+    width: 500px;
+    background-color: var(--ternary);
+    display:flex;
+    flex-direction: column;
+    border-radius: 10px;
+}
+
+.form_create_victory{
+    display:flex;
+    flex-wrap: wrap;
+    /* flex-direction: column; */
+    gap:10px;
+}
+
+.active > form > div {
+    color:var(--bg-default);
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+    flex-basis: 100%;
+}
+
+#id_content{
+    height: 2ch;
+    padding:10px;
+    border-radius: 20px;
+    border: 1px solid var(--bg-slow);
+}
+
+#annuler{
+    all:unset;
+    
+    background-color: var(--bg-default);
+    border: none;
+    offset: none;
+    border-radius: 10px;
+    color:white;
+    font-weight: 600;
+    width: 100px;
+    box-shadow: 0 2px 3px var(--ternary);
+    cursor: default;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    color: var(--ternary);  
+}
+
+#create {
+    padding: 10px;
+    background-color: var(--bg-intense);
+    border: none;
+    offset: none;
+    border-radius: 10px;
+    color:white;
+    font-weight: 600;
+    width: 100px;
+    box-shadow: 0 2px 3px var(--ternary);
+}
+
+.input{
+    all:unset;
+    width:70%;
+    padding:20px;
+    background: none;
+    border:none;
+    border-bottom: 3px solid white;
+    color:var(--ternary);
+}
+
+.modify_form > button{
+    padding: 20px;
+    background:none;
+    border: none;
+}
+
+.img {
+    width: 20px;
+    
+}

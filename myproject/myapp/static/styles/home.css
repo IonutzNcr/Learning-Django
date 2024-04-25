@@ -1,0 +1,58 @@
+:root{
+    --action : #FF204E;
+    --bg-default: rgb(206, 206, 206); 
+    --bg-intense: #00224D;
+    --bg-slow: #3e669a;
+    --ternary: #5D0E41;
+    --secondary:#A0153E;
+}
+
+
+
+body{
+    width: 100vw;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    gap:20px;
+}
+
+
+.textcontent{
+    display:flex;
+    flex-direction: column;
+    gap:2px;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+}
+
+.textcontent > p {
+    width: 40ch;
+}
+
+button {
+    padding: 10px;
+    background-color: var(--bg-intense);
+    border: none;
+    offset: none;
+    border-radius: 10px;
+    color:white;
+    font-weight: 600;
+    width: 200px;
+
+    box-shadow: 5px 3px 3px rgb(44, 41, 41);
+}
+
+.title{
+    font-weight: 700;
+    font-size: 44px;
+    color:var(--action);
+    transform: rotate(-4deg);
+}
+
+a{
+    all:unset;
+    color:var(--bg-intense);
+    text-decoration: underline;
+}
